@@ -1,4 +1,5 @@
 //Yellowstone Button
+
 var yellowstoneInfoBtn = document.getElementById("yellowstoneConfirm")
 
 var getYellowstoneWeather = function () {
@@ -10,7 +11,7 @@ var getYellowstoneWeather = function () {
     fetch(weatherApi).then(function (response) {
         response.json().then(function (data) {
             console.log(data)
-            displayYellowstoneWeather(data)
+            displayYellowstoneWeather(data);
         })
     })
 }
@@ -38,6 +39,32 @@ function displayYellowstoneWeather(data) {
         dayDiv.append(dayDate, humiditiyEL, windSpeedEl, tempEl, forecastIconDescription, weatherIcon);
         fiveDayTempDiv.appendChild(dayDiv);
     }
+}
+
+function getYellowstoneAddress() {
+    var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=yell&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
+    fetch(addressApi).then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            displayYellowstoneAddress(data)
+        })
+    })
+}
+
+function displayYellowstoneAddress(data) {
+    var visitorCenter = document.getElementById("visitor-center")
+    var i = 0;
+    var addressLineOne = data.data[i].addresses[i].line1
+    var postalCode = data.data[i].addresses[i].postalCode
+    var stateCode = data.data[i].addresses[i].stateCode
+    console.log(addressLineOne, postalCode, stateCode)
+    var addressDiv = document.createElement("div")
+    var heading = document.createElement("h3")
+    heading.innerHTML = " The Yellowstone Visitor Center is located at: "
+    var address = document.createElement("p")
+    address.innerHTML = addressLineOne + " <br> " + stateCode + " " + postalCode
+    addressDiv.append(heading, address)
+    visitorCenter.appendChild(addressDiv)
 }
 
 yellowstoneInfoBtn.addEventListener("click", getYellowstoneWeather)
@@ -86,6 +113,30 @@ function displayYosemiteWeather(data) {
     }
 }
 
+function getYosemiteAddress() {
+    console.log("running")
+    //RETURNS AN EMPTY ADDRESS ARRAY = HARD CODED THE ADDRESS IN FOR THIS ONE
+    var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=yose&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
+    fetch(addressApi).then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            displayYosemiteAddress(data)
+        })
+    })
+}
+
+
+function displayYosemiteAddress(data) {
+    var visitorCenter = document.getElementById("visitor-center")
+    var addressDiv = document.createElement("div")
+    var heading = document.createElement("h3")
+    heading.innerHTML = " The Yosemite Visitor Center is located at: " + "<br>"
+    var address = document.createElement("p")
+    address.innerHTML = " 9035 Village Drive " + "<br>" + " CA 95389"
+    addressDiv.append(heading, address)
+    visitorCenter.appendChild(addressDiv)
+}
+
 yosemiteInfoBtn.addEventListener("click", getYosemiteWeather)
 
 //Glacier Button
@@ -129,6 +180,32 @@ function displayGlacierWeather(data) {
         dayDiv.append(dayDate, humiditiyEL, windSpeedEl, tempEl, forecastIconDescription, weatherIcon);
         fiveDayTempDiv.appendChild(dayDiv);
     }
+}
+
+function getGlacierAddress() {
+    var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=glac&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
+    fetch(addressApi).then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            displayGlacierAddress(data)
+        })
+    })
+}
+
+function displayGlacierAddress(data) {
+    var visitorCenter = document.getElementById("visitor-center")
+    var i = 0;
+    var addressLineOne = data.data[i].addresses[i].line1
+    var postalCode = data.data[i].addresses[i].postalCode
+    var stateCode = data.data[i].addresses[i].stateCode
+    console.log(addressLineOne, postalCode, stateCode)
+    var addressDiv = document.createElement("div")
+    var heading = document.createElement("h3")
+    heading.innerHTML = " The Glacier Visitor Center is located at: "
+    var address = document.createElement("p")
+    address.innerHTML = addressLineOne + " <br> " + stateCode + " " + postalCode
+    addressDiv.append(heading, address)
+    visitorCenter.appendChild(addressDiv)
 }
 
 glacierInfoBtn.addEventListener("click", getGlacierWeather)
@@ -175,6 +252,31 @@ function displayGrandCanyonWeather(data) {
         fiveDayTempDiv.appendChild(dayDiv);
     }
 }
+function getGrandCanyonAddress() {
+    var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=grca&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
+    fetch(addressApi).then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            displayGrandCanyonAddress(data)
+        })
+    })
+}
+
+function displayGrandCanyonAddress(data) {
+    var visitorCenter = document.getElementById("visitor-center")
+    var i = 0;
+    var addressLineOne = data.data[i].addresses[i].line1
+    var postalCode = data.data[i].addresses[i].postalCode
+    var stateCode = data.data[i].addresses[i].stateCode
+    console.log(addressLineOne, postalCode, stateCode)
+    var addressDiv = document.createElement("div")
+    var heading = document.createElement("h3")
+    heading.innerHTML = " The Grand Canyon Visitor Center is located at: "
+    var address = document.createElement("p")
+    address.innerHTML = addressLineOne + " <br> " + stateCode + " " + postalCode
+    addressDiv.append(heading, address)
+    visitorCenter.appendChild(addressDiv)
+}
 
 grandCanyonInfoBtn.addEventListener("click", getGrandCanyonWeather)
 
@@ -219,6 +321,32 @@ function displayZionWeather(data) {
         dayDiv.append(dayDate, humiditiyEL, windSpeedEl, tempEl, forecastIconDescription, weatherIcon);
         fiveDayTempDiv.appendChild(dayDiv);
     }
+}
+
+function getZionAddress() {
+    var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=zion&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
+    fetch(addressApi).then(function (response) {
+        response.json().then(function (data) {
+            console.log(data)
+            displayZionAddress(data)
+        })
+    })
+}
+
+function displayZionAddress(data) {
+    var visitorCenter = document.getElementById("visitor-center")
+    var i = 0;
+    var addressLineOne = data.data[2].addresses[i].line1
+    var postalCode = data.data[2].addresses[i].postalCode
+    var stateCode = data.data[2].addresses[i].stateCode
+    console.log(addressLineOne, postalCode, stateCode)
+    var addressDiv = document.createElement("div")
+    var heading = document.createElement("h3")
+    heading.innerHTML = " The Zion Visitor Center is located at: "
+    var address = document.createElement("p")
+    address.innerHTML = addressLineOne + " <br> " + stateCode + " " + postalCode
+    addressDiv.append(heading, address)
+    visitorCenter.appendChild(addressDiv)
 }
 
 zionInfoBtn.addEventListener("click", getZionWeather)
