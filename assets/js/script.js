@@ -19,6 +19,7 @@ var getYellowstoneWeather = function () {
 
 function displayYellowstoneWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
+    fiveDayTempDiv.textContent = ""
     for (i = 0; i < 5; i++) {
         var date = data.daily[i].dt
         var humidity = data.daily[i].humidity
@@ -54,6 +55,7 @@ function getYellowstoneAddress() {
 
 function displayYellowstoneAddress(data) {
     var visitorCenter = document.getElementById("visitor-center")
+    visitorCenter.textContent = ""
     var i = 0;
     var addressLineOne = data.data[i].addresses[i].line1
     var postalCode = data.data[i].addresses[i].postalCode
@@ -91,6 +93,7 @@ var getYosemiteWeather = function () {
 
 function displayYosemiteWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
+    fiveDayTempDiv.textContent = ""
     for (i = 0; i < 5; i++) {
         var date = data.daily[i].dt
         var humidity = data.daily[i].humidity
@@ -115,7 +118,8 @@ function displayYosemiteWeather(data) {
 }
 
 function getYosemiteAddress() {
-    console.log("running")
+    var visitorCenter = document.getElementById("visitor-center")
+    visitorCenter.textContent = ""
     //RETURNS AN EMPTY ADDRESS ARRAY = HARD CODED THE ADDRESS IN FOR THIS ONE
     var addressApi = "https://developer.nps.gov/api/v1/visitorcenters?parkCode=yose&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V"
     fetch(addressApi).then(function (response) {
@@ -160,6 +164,7 @@ var getGlacierWeather = function () {
 
 function displayGlacierWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
+    fiveDayTempDiv.textContent = ""
     for (i = 0; i < 5; i++) {
         var date = data.daily[i].dt
         var humidity = data.daily[i].humidity
@@ -195,6 +200,7 @@ function getGlacierAddress() {
 
 function displayGlacierAddress(data) {
     var visitorCenter = document.getElementById("visitor-center")
+    visitorCenter.textContent = ""
     var i = 0;
     var addressLineOne = data.data[i].addresses[i].line1
     var postalCode = data.data[i].addresses[i].postalCode
@@ -231,6 +237,7 @@ var getGrandCanyonWeather = function () {
 
 function displayGrandCanyonWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
+    fiveDayTempDiv.textContent = ""
     for (i = 0; i < 5; i++) {
         var date = data.daily[i].dt
         var humidity = data.daily[i].humidity
@@ -265,6 +272,7 @@ function getGrandCanyonAddress() {
 
 function displayGrandCanyonAddress(data) {
     var visitorCenter = document.getElementById("visitor-center")
+    visitorCenter.textContent = ""
     var i = 0;
     var addressLineOne = data.data[i].addresses[i].line1
     var postalCode = data.data[i].addresses[i].postalCode
@@ -301,6 +309,7 @@ var getZionWeather = function () {
 
 function displayZionWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
+    fiveDayTempDiv.textContent = ""
     for (i = 0; i < 5; i++) {
         var date = data.daily[i].dt
         var humidity = data.daily[i].humidity
@@ -336,6 +345,7 @@ function getZionAddress() {
 
 function displayZionAddress(data) {
     var visitorCenter = document.getElementById("visitor-center")
+    visitorCenter.textContent = ""
     var i = 0;
     var addressLineOne = data.data[2].addresses[i].line1
     var postalCode = data.data[2].addresses[i].postalCode
