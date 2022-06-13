@@ -16,6 +16,7 @@ var getYellowstoneWeather = function () {
     })
 }
 
+
 function displayYellowstoneWeather(data) {
     var fiveDayTempDiv = document.getElementById("park-forecast")
     for (i = 0; i < 5; i++) {
