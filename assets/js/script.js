@@ -1,3 +1,8 @@
+var yellowstone = document.getElementById("#yellowstone");
+var yosemite = document.getElementById("#yosemite");
+var canyon = document.getElementById("canyon");
+var glacier = document.getElementById("#glacier");
+var zion = document.getElementById("#zion");
 //Yellowstone Button
 var yellowstoneInfoBtn = document.getElementById("yellowstoneConfirm")
 
@@ -38,6 +43,7 @@ function displayYellowstoneWeather(data) {
         dayDiv.append(dayDate, humiditiyEL, windSpeedEl, tempEl, forecastIconDescription, weatherIcon);
         fiveDayTempDiv.appendChild(dayDiv);
     }
+
 }
 
 yellowstoneInfoBtn.addEventListener("click", getYellowstoneWeather)
@@ -84,6 +90,7 @@ function displayYosemiteWeather(data) {
         dayDiv.append(dayDate, humiditiyEL, windSpeedEl, tempEl, forecastIconDescription, weatherIcon);
         fiveDayTempDiv.appendChild(dayDiv);
     }
+
 }
 
 yosemiteInfoBtn.addEventListener("click", getYosemiteWeather)
@@ -222,3 +229,18 @@ function displayZionWeather(data) {
 }
 
 zionInfoBtn.addEventListener("click", getZionWeather)
+
+// Function to save checkboxes into local storage.
+var saveYellowstone = function () {
+    localStorage.setItem("Yellowstone", "Done");
+};
+
+var yellowstoneBox = document.querySelector("#yellowstoneDone");
+
+yellowstoneBox.addEventListener("change", saveYellowstone);
+
+function loadStorage() {
+    if (localStorage.getItem(key) === "Yellowstone") {
+        document.getElementById("yellowstoneDone").checked = true;
+    }
+};
