@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header class="bg-green-900 py-10">
+    <header class="bg-green-900 py-8">
       <h1 class="text-center text-6xl text-white mx-auto">
         National Park Weather
       </h1>
@@ -18,53 +18,98 @@
     <main class="flex m-2 mb-5">
       <div class="w-2/3">
         <h2 class="m-2 pl-3 text-3xl">
-          Select a park to view weather &
+          Select a park to 5-day forecast &
           <i class="fa fa-info" aria-hidden="true"></i>
         </h2>
-        <div
-          class="flex-col justify-evenly bg-(/assets/images/yellowstone.jpg)"
-        >
+        <div class="flex-col justify-evenly">
           <section
-            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/yellowstone.jpg')]"
+            class="m-3 border pt-12 pb-2 pl-2 my-6 text-white bg-[url('assets/images/yellowstone.jpg')] rounded"
           >
-            <h3 class="text-2xl">Yellowstone National Park</h3>
-            <button type="button" id="yellowstoneConfirm">
+            <div class="flex bg-black/25 w-2/5">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Yellowstone National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="yellowstoneConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full"
+            >
               View Info & Weather
             </button>
           </section>
 
           <section
-            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/yosemite.jpg')]"
+            class="m-3 border pt-12 pb-2 pl-2 my-6 text-white bg-[url('assets/images/yosemite.jpg')] rounded"
           >
-            <h3 class="text-2xl">Yosemite National Park</h3>
-            <button type="button" id="yosemiteConfirm">
+            <div class="flex bg-black/25 w-2/5">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Yosemite National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="yosemiteConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full"
+            >
               View Info & Weather
             </button>
           </section>
 
           <section
-            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/glacier-natl-park.jpg')]"
+            class="m-3 border pt-12 pb-2 pl-2 my-6 text-white bg-[url('assets/images/glacier-natl-park.jpg')] rounded"
           >
-            <h3 class="text-2xl">Glacier National Park</h3>
-            <button type="button" id="glacierConfirm">
+            <div class="flex bg-black/25 w-2/5">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Glacier National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="glacierConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full"
+            >
               View Info & Weather
             </button>
           </section>
 
           <section
-            class="m-3 border pt-12 pb-2 pl-2 my-5 text-white bg-[url('assets/images/grand-canyon.jpg')]"
+            class="m-3 border pt-12 pb-2 pl-2 my-6 text-white bg-[url('assets/images/grand-canyon.jpg')] rounded"
           >
-            <h3 class="text-2xl">Grand Canyon National Park</h3>
-            <button type="button" id="grandCanyonConfirm">
+            <div class="flex bg-black/25 w-1/2">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Grand Canyon National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="grandCanyonConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full"
+            >
               View Info & Weather
             </button>
           </section>
 
           <section
-            class="m-2 border pt-12 pb-2 pl-2 my-5 text-white bg-[url('assets/images/zion.jpg')]"
+            class="m-2 border pt-12 pb-2 pl-2 my-6 text-white bg-[url('assets/images/zion.jpg')] rounded"
           >
-            <h3 class="text-2xl">Zion National Park</h3>
-            <button type="button" id="zionConfirm">View Info & Weather</button>
+            <div class="flex bg-black/25 w-2/5">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Zion National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="zionConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full"
+            >
+              View Info & Weather
+            </button>
           </section>
         </div>
       </div>
