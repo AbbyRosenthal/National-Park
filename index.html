@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>National Park Info</title>
   </head>
 
   <body>
-    <header class="bg-green-800 py-10">
+    <header class="bg-green-900 py-10">
       <h1 class="text-center text-6xl text-white mx-auto">
         National Park Weather
       </h1>
@@ -20,36 +21,48 @@
           Select a park to view weather &
           <i class="fa fa-info" aria-hidden="true"></i>
         </h2>
-        <div class="flex-col justify-evenly">
-          <section class="m-3 border pt-12 pb-1 pl-1 my-5">
+        <div
+          class="flex-col justify-evenly bg-(/assets/images/yellowstone.jpg)"
+        >
+          <section
+            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/yellowstone.jpg')]"
+          >
             <h3 class="text-2xl">Yellowstone National Park</h3>
             <button type="button" id="yellowstoneConfirm">
               View Info & Weather
             </button>
           </section>
 
-          <section class="m-3 border pt-12 pb-1 pl-1 my-5">
+          <section
+            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/yosemite.jpg')]"
+          >
             <h3 class="text-2xl">Yosemite National Park</h3>
             <button type="button" id="yosemiteConfirm">
               View Info & Weather
             </button>
           </section>
 
-          <section class="m-3 border pt-10 pb-1 pl-1 my-5">
+          <section
+            class="m-3 border pt-10 pb-2 pl-2 my-5 text-white bg-[url('assets/images/glacier-natl-park.jpg')]"
+          >
             <h3 class="text-2xl">Glacier National Park</h3>
             <button type="button" id="glacierConfirm">
               View Info & Weather
             </button>
           </section>
 
-          <section class="m-3 border pt-12 pb-1 pl-1 my-5">
+          <section
+            class="m-3 border pt-12 pb-2 pl-2 my-5 text-white bg-[url('assets/images/grand-canyon.jpg')]"
+          >
             <h3 class="text-2xl">Grand Canyon National Park</h3>
             <button type="button" id="grandCanyonConfirm">
               View Info & Weather
             </button>
           </section>
 
-          <section class="m-2 border pt-12 pb-1 pl-1 my-5">
+          <section
+            class="m-2 border pt-12 pb-2 pl-2 my-5 text-white bg-[url('assets/images/zion.jpg')]"
+          >
             <h3 class="text-2xl">Zion National Park</h3>
             <button type="button" id="zionConfirm">View Info & Weather</button>
           </section>
@@ -63,7 +76,7 @@
         </section>
       </div>
     </main>
-    <footer class="bg-green-800 py-5 text-white text-xl pr-10 text-right">
+    <footer class="bg-green-900 py-5 text-white text-xl pr-10 text-right">
       &copy; Venom Prison 2022
     </footer>
     <script src="./assets/js/script.js"></script>
