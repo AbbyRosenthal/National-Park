@@ -30,7 +30,9 @@ function displayYellowstoneWeather(data) {
     var windSpeed = data.daily[i].wind_speed;
     var temp = data.daily[i].temp.day;
     var dayDiv = document.createElement("div");
+    dayDiv.classList = "bg-neutral-200 mb-2 rounded-lg py-2 pl-4";
     var dayDate = document.createElement("h3");
+    dayDate.classList = "text-2xl font-semibold";
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
@@ -77,6 +79,8 @@ function displayYellowstoneAddress(data) {
   var stateCode = data.data[i].addresses[i].stateCode;
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
+  addressDiv.classList =
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Yellowstone Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -120,7 +124,9 @@ function displayYosemiteWeather(data) {
     var windSpeed = data.daily[i].wind_speed;
     var temp = data.daily[i].temp.day;
     var dayDiv = document.createElement("div");
+    dayDiv.classList = "bg-neutral-200 mb-2 rounded-lg py-2 pl-4";
     var dayDate = document.createElement("h3");
+    dayDate.classList = "text-2xl font-semibold";
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
@@ -164,6 +170,8 @@ function getYosemiteAddress() {
 function displayYosemiteAddress(data) {
   var visitorCenter = document.getElementById("visitor-center");
   var addressDiv = document.createElement("div");
+  addressDiv.classList =
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Yosemite Visitor Center is located at: " + "<br>";
   var address = document.createElement("p");
@@ -207,7 +215,9 @@ function displayGlacierWeather(data) {
     var windSpeed = data.daily[i].wind_speed;
     var temp = data.daily[i].temp.day;
     var dayDiv = document.createElement("div");
+    dayDiv.classList = "bg-neutral-200 mb-2 rounded-lg py-2 pl-4";
     var dayDate = document.createElement("h3");
+    dayDate.classList = "text-2xl font-semibold";
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
@@ -254,6 +264,8 @@ function displayGlacierAddress(data) {
   var stateCode = data.data[i].addresses[i].stateCode;
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
+  addressDiv.classList =
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Glacier Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -297,7 +309,9 @@ function displayGrandCanyonWeather(data) {
     var windSpeed = data.daily[i].wind_speed;
     var temp = data.daily[i].temp.day;
     var dayDiv = document.createElement("div");
+    dayDiv.classList = "bg-neutral-200 mb-2 rounded-lg py-2 pl-4";
     var dayDate = document.createElement("h3");
+    dayDate.classList = "text-2xl font-semibold";
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
@@ -343,6 +357,8 @@ function displayGrandCanyonAddress(data) {
   var stateCode = data.data[i].addresses[i].stateCode;
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
+  addressDiv.classList =
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Grand Canyon Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -386,7 +402,9 @@ function displayZionWeather(data) {
     var windSpeed = data.daily[i].wind_speed;
     var temp = data.daily[i].temp.day;
     var dayDiv = document.createElement("div");
+    dayDiv.classList = "bg-neutral-200 mb-2 rounded-lg py-2 pl-4";
     var dayDate = document.createElement("h3");
+    dayDate.classList = "text-2xl font-semibold";
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
@@ -433,6 +451,8 @@ function displayZionAddress(data) {
   var stateCode = data.data[2].addresses[i].stateCode;
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
+  addressDiv.classList =
+    "bg-green-900 text-stone-100 mb-2 rounded font-semibold py-2 pl-4";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Zion Visitor Center is located at: ";
   var address = document.createElement("p");
