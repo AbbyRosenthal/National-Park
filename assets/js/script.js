@@ -86,6 +86,7 @@ function displayYellowstoneAddress(data) {
 }
 
 yellowstoneInfoBtn.addEventListener("click", getYellowstoneWeather);
+yellowstoneInfoBtn.addEventListener("click", displayYosemiteAddress);
 
 //Yosemite Button
 
@@ -172,6 +173,7 @@ function displayYosemiteAddress(data) {
 }
 
 yosemiteInfoBtn.addEventListener("click", getYosemiteWeather);
+yosemiteInfoBtn.addEventListener("click", displayYosemiteAddress);
 
 //Glacier Button
 
@@ -261,6 +263,7 @@ function displayGlacierAddress(data) {
 }
 
 glacierInfoBtn.addEventListener("click", getGlacierWeather);
+glacierInfoBtn.addEventListener("click", displayGlacierAddress);
 
 //Grand Canyon Button
 
@@ -349,6 +352,7 @@ function displayGrandCanyonAddress(data) {
 }
 
 grandCanyonInfoBtn.addEventListener("click", getGrandCanyonWeather);
+grandCanyonInfoBtn.addEventListener("click", displayGrandCanyonAddress);
 
 //Zion Button
 
@@ -438,3 +442,4 @@ function displayZionAddress(data) {
 }
 
 zionInfoBtn.addEventListener("click", getZionWeather);
+zionInfoBtn.addEventListener("click", getZionAddress);
