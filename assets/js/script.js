@@ -30,13 +30,18 @@ function displayYellowstoneWeather(data) {
     var dayDiv = document.createElement("div");
     var dayDate = document.createElement("h3");
     dayDate.innerHTML = dayjs.unix(date).format("M/D/YYYY");
+    dayDate.classList = "text-2xl font-semibold py-2";
     var humiditiyEL = document.createElement("p");
     humiditiyEL.innerHTML = "Humidity: " + humidity + "%";
+    humiditiyEL.classList = "pb-1";
     var windSpeedEl = document.createElement("p");
     windSpeedEl.innerHTML = "Wind Speed: " + windSpeed + " mph ";
+    windSpeedEl.classList = "pb-1";
     var tempEl = document.createElement("p");
     tempEl.innerHTML = "Temp: " + temp + " °F";
+    tempEl.classList = "pb-1";
     var weatherIcon = document.createElement("img");
+    weatherIcon.classList = "pb-4";
     var forecastIconUrl =
       "https://openweathermap.org/img/w/" +
       data.daily[i].weather[0].icon +
