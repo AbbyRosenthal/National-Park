@@ -1,80 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>National Park Info</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <h1>National Park Info</h1>
+  <body>
+    <header class="bg-green-900 py-8">
+      <h1 class="text-center text-6xl text-stone-100 mx-auto">
+        National Park Weather
+      </h1>
     </header>
-    <div class="main-1 container">
-        <h2>Select a park to view weather & <i class="fa fa-info" aria-hidden="true"></i></h2>
-        <div class="parks">
+    <main class="flex m-2 mb-5">
+      <div class="w-2/3">
+        <h2 class="m-2 pl-3 text-3xl">
+          Select a park to view 5-day forecast & visitor center info
+          <i class="fa fa-info" aria-hidden="true"></i>
+        </h2>
+        <div class="flex-col">
+          <section
+            class="m-3 mb-6 border pt-12 pb-3 pl-3 my-6 text-white bg-[url('assets/images/yellowstone.jpg')] rounded drop-shadow-md"
+          >
+            <div class="flex bg-black/25 w-1/2 rounded">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Yellowstone National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="yellowstoneConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full ease-out duration-300"
+            >
+              View Info & Weather
+            </button>
+          </section>
 
-            <section class="park-row">
-                <input type="checkbox" id="checkbox1">
-                <h3 class="park-name" id="1">Yellowstone National Park</h3>
-                <button type="button" id="yellowstoneConfirm">View Info & Weather</button>
-                </input>
-            </section>
+          <section
+            class="m-3 mb-6 border pt-12 pb-3 pl-3 my-6 text-white bg-[url('assets/images/yosemite.jpg')] rounded drop-shadow-md"
+          >
+            <div class="flex bg-black/25 w-1/2 rounded">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Yosemite National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="yosemiteConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full ease-out duration-300"
+            >
+              View Info & Weather
+            </button>
+          </section>
 
+          <section
+            class="m-3 mb-6 border pt-12 pb-3 pl-3 my-6 text-white bg-[url('assets/images/glacier-natl-park.jpg')] rounded drop-shadow-md"
+          >
+            <div class="flex bg-black/25 w-1/2 rounded">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Glacier National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="glacierConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full ease-out duration-300"
+            >
+              View Info & Weather
+            </button>
+          </section>
 
-            <section class="park-row">
-                <input type="checkbox" id="checkbox2">
-                <h3 class="park-name" id="2">Yosemite National Park</h3>
-                <button type="button" id="yosemiteConfirm">View Info & Weather</button>
+          <section
+            class="m-3 mb-6 border pt-12 pb-3 pl-3 my-6 text-white bg-[url('assets/images/grand-canyon.jpg')] rounded drop-shadow-md"
+          >
+            <div class="flex bg-black/25 w-1/2 rounded">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Grand Canyon National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="grandCanyonConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full ease-out duration-300"
+            >
+              View Info & Weather
+            </button>
+          </section>
 
-            </section>
-
-            <section class="park-row">
-                <input type="checkbox" id="checkbox3">
-                <h3 class="park-name" id="3">Glacier National Park</h3>
-                <button type="button" id="glacierConfirm">View Info & Weather</button>
-            </section>
-
-            <section class="park-row">
-                <input type="checkbox" id="checkbox4">
-                <h3 class="park-name" id="4">Grand Canyon National Park</h3>
-                <button type="button" id="grandCanyonConfirm">View Info & Weather</button>
-            </section>
-
-            <section class="park-row">
-                <input type="checkbox" name="checkbox" id="checkbox5">
-                <h3 class="park-name" id="5">Zion National Park</h3>
-                <button type="button" id="zionConfirm">View Info & Weather</button>
-            </section>
+          <section
+            class="m-2 mb-6 border pt-12 pb-3 pl-3 my-6 text-white bg-[url('assets/images/zion.jpg')] rounded drop-shadow-md"
+          >
+            <div class="flex bg-black/25 w-1/2 rounded">
+              <div class="pt-2 px-2">
+                <input type="checkbox" />
+              </div>
+              <h3 class="text-3xl">Zion National Park</h3>
+            </div>
+            <button
+              type="button"
+              id="zionConfirm"
+              class="bg-black/40 hover:bg-black/100 px-5 rounded-full ease-out duration-300"
+            >
+              View Info & Weather
+            </button>
+          </section>
         </div>
-        <div class="container main-2">
-            <section id="visitor-center">
+      </div>
+      <div class="w-1/3 m-5 p-5 mt-10 rounded-md">
+        <section id="visitor-center"></section>
 
-            </section>
-
-            <div id="park-forecast"></div>
-
-            </section>
-        </div>
-    </div>
-    <footer>&copy; Venom Prison 2022</footer>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <section>
+          <div id="park-forecast"></div>
+        </section>
+      </div>
+    </main>
+    <footer class="bg-green-900 py-5 text-white text-xl pr-10 text-right">
+      &copy; Venom Prison 2022
+    </footer>
     <script src="./assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
-        integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js"
-        integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js"
-        integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg=="
-        crossorigin="anonymous"></script>
-
-</body>
-
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/utc.min.js"
+      integrity="sha512-m00bfmYnAl3plEBlQfeQUhw/U2uvmw29V2+jxSWpAjankMWS+zAsjezbKWDEJNXqWq9o9qQZSOiA2RKDpa4D5w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/plugin/timezone.min.js"
+      integrity="sha512-pslqxxHAYPCxaSeFSmXXxDkLejD5dbFVC66aiVq0z4v7VTJBU+wqcG1OpNh4p3MjS2D6NCwz/H2QmSc7dXxryg=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
