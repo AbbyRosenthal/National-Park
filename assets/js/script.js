@@ -440,10 +440,10 @@ zionInfoBtn.addEventListener("click", getZionWeather)
 
 var storeLocal = function (event) {
     var checkbox = $(event.target);
+    var parkName = checkbox.attr("class");
     console.log(event.target);
     if (checkbox[0].checked) {
         console.log(checkbox);
-        var parkName = checkbox.siblings()[0].textContent;
         var parkNum = checkbox.attr("id"); 
         console.log(parkName);
         console.log(parkNum);
