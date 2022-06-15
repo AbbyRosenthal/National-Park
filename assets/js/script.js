@@ -80,7 +80,7 @@ function displayYellowstoneAddress(data) {
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
   addressDiv.classList =
-    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4 drop-shadow-md";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Yellowstone Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -171,7 +171,7 @@ function displayYosemiteAddress(data) {
   var visitorCenter = document.getElementById("visitor-center");
   var addressDiv = document.createElement("div");
   addressDiv.classList =
-    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4 drop-shadow-md";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Yosemite Visitor Center is located at: " + "<br>";
   var address = document.createElement("p");
@@ -265,7 +265,7 @@ function displayGlacierAddress(data) {
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
   addressDiv.classList =
-    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4 drop-shadow-md";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Glacier Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -358,7 +358,7 @@ function displayGrandCanyonAddress(data) {
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
   addressDiv.classList =
-    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4";
+    "bg-green-900 text-stone-100 mb-2 py-2 rounded font-semibold pl-4 drop-shadow-md";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Grand Canyon Visitor Center is located at: ";
   var address = document.createElement("p");
@@ -452,7 +452,7 @@ function displayZionAddress(data) {
   console.log(addressLineOne, postalCode, stateCode);
   var addressDiv = document.createElement("div");
   addressDiv.classList =
-    "bg-green-900 text-stone-100 mb-2 rounded font-semibold py-2 pl-4";
+    "bg-green-900 text-stone-100 mb-2 rounded font-semibold py-2 pl-4 drop-shadow-md";
   var heading = document.createElement("h3");
   heading.innerHTML = " The Zion Visitor Center is located at: ";
   var address = document.createElement("p");
