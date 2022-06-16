@@ -1,3 +1,5 @@
+
+
 //Yellowstone Button
 
 var yellowstoneInfoBtn = document.getElementById("yellowstoneConfirm");
@@ -431,6 +433,60 @@ function displayZionWeather(data) {
   }
 }
 
+zionInfoBtn.addEventListener("click", getZionWeather)
+
+
+// checkBox.addEventListener("change", checkBoxHandler);
+
+var storeLocal = function (event) {
+    var checkbox = $(event.target);
+    var parkName = checkbox.attr("class");
+    console.log(event.target);
+    if (checkbox[0].checked) {
+        console.log(checkbox);
+        var parkNum = checkbox.attr("id"); 
+        console.log(parkName);
+        console.log(parkNum);
+        localStorage.setItem(parkNum, parkName);
+        // checkbox.classList.add("visited");
+    } else {
+        localStorage.removeItem(checkbox.attr("id"))
+    }
+}
+
+$("input[type=checkbox]").on('change', storeLocal);
+
+
+var renderStorage = function () {
+    for (i = 1; i <= 5; i++) {
+        var data = localStorage.getItem("checkbox" + i);
+        // $("#" + i).siblings()[0].value = data
+
+        if (data !== null) {
+            console.log("data is not null");
+            document.getElementById("checkbox" + i).checked = true;
+        } else if (data == null) {
+            document.getElementById("checkbox" + i).checked = false;
+            // checkbox.classList.remove("visited");
+            console.log("nothing there");
+        }
+    }
+};
+
+// var checkBoxHandler = function() {
+    
+//     var parkName = document.querySelector("input[id=park-checkbox]").textContent;
+//     var parkNum = document.querySelector(".park-name").id;
+    
+//     console.log(parkName);
+//     console.log(parkNum);
+//     if (this.checked) {
+//         localStorage.setItem(parkNum, parkName);
+//     } else {
+//         localStorage.setItem(parkNum, "");
+//     }
+// };
+renderStorage();
 function getZionAddress() {
   var addressApi =
     "https://developer.nps.gov/api/v1/visitorcenters?parkCode=zion&api_key=lcjncgJosjdbFjuEiis696LrCxnEgC7HVgdWIb6V";
